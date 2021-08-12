@@ -1,0 +1,122 @@
+// $enable-shadows: true;
+$is-rtl: false;
+$rfs-breakpoint: 1300px;
+$rfs-base-value: 30px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+$theme-colors: (
+  "primary": #1a3028,
+  "secondary": #c1ad8e,
+  "danger": #ff4514,
+  "warning": #ebe988,
+  "success": #00cc47,
+  "info": #f6f6fb,
+  "dark": #000000,
+);
+
+$purple: #42315a;
+$primary: #1a3028;
+$secondary: #c1ad8e;
+$danger: #ff4514;
+$warning: #ebe988;
+$success: #00cc47;
+$info: #f6f6fb;
+$dark: #000000;
+$body-bg: #fff;
+$body-color: #000;
+$gray-400: #eeeeee;
+$gray-500: #f0f0f0;
+$gray-600: #7b7b7b;
+$border-radius: 3rem;
+$gray-300: #fcfafa;
+$input-border-color: #20271b;
+$input-bg: transparent;
+$link-color: inherit;
+$link-decoration: none;
+$link-hover-decoration: none;
+$link-hover-color: $primary;
+$headings-font-weight: 700;
+$btn-font-weight: 700;
+$font-weight-bolder: 700;
+$font-family-base: "Helvetica", sans-serif;
+
+$grid-gutter-width: 1.875rem;
+$box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.06);
+$table-radius: 0.3rem;
+$input-padding-y: 0.6rem;
+
+/*!
+ * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/transitions";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+// Custom varbiables
+$border-radius-xl: 3rem;
+$box-shadow-lg: 0px 0px 15px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-xl: 0px 22px 33px rgba(0, 0, 0, 0.04);
+$font-weight-medium: 500;
+$font-weight-semi: 600;
+$font-family-heading: "Helvetica", sans-serif;
+@function aspectRatio($width, $height) {
+  @return ($height / $width) * 100%;
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: lighten($primary, 10%);
+    outline: 0 solid $gray-400;
+    border-radius: 20em;
+
+    &:hover {
+      background: $primary;
+    }
+  }
+}

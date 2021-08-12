@@ -1,0 +1,109 @@
+// salcss
+:root {
+  --sal-duration: 0.5s;
+  --sal-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+[data-sal|="slide"] {
+  transition-timing-function: ease-in-out;
+}
+
+[data-sal="slide-up-lg"] {
+  transform: translateY(100px);
+}
+
+[data-sal] {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+}
+
+.gslide-description {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.gslide-description {
+  flex: auto;
+}
+.gslide-title {
+  font-family: $font-family-base !important;
+  text-align: center;
+  @include font-size(20px);
+  font-weight: $font-weight-bold !important;
+}
+.gslide-title:last-child {
+  margin-bottom: 0;
+}
+.swiper-pagination-bullet {
+  background: $secondary;
+}
+
+.sliderButtons {
+  &-prev,
+  &-next {
+    @include rfs(60px, width);
+    @include rfs(60px, height);
+    @include font-size(30px);
+    border-radius: 20rem;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.06);
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 200ms;
+    position: absolute;
+    right: calc(100% - 30px);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    z-index: 2;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &-prev {
+    right: auto;
+    left: calc(100% - 30px);
+  }
+
+  &-wrapper {
+    position: relative;
+
+    &:hover,
+    &.is-visable-arrows {
+      .sliderButtons {
+        &-next,
+        &-prev {
+          &.swiper-button-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.sliderButtons-wrapper {
+  .swiper-slide {
+    height: auto;
+  }
+}
+#mainSlider {
+  .swiper-pagination-bullet {
+    background: $secondary;
+    border-radius: 20rem;
+    transition: 0.2s ease-in-out;
+    height: 8px;
+    width: 25px;
+  }
+  .swiper-pagination-bullet-active {
+    background: $secondary;
+  }
+}

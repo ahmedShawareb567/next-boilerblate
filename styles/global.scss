@@ -1,0 +1,25 @@
+@import "./fonts";
+@import "./bootstrap";
+@import "./utils";
+@import "./libs";
+@import "./components/Btn.scss";
+@import "./components/Input.scss";
+// libs
+@import "./overide.scss";
+html {
+  scroll-behavior: smooth;
+  ::-moz-selection {
+    background: $secondary;
+  }
+
+  ::selection {
+    background: $secondary;
+  }
+  font-size: 16px;
+}
+.theApp {
+  padding-top: rem(80px);
+  &-body {
+    overflow: hidden;
+  }
+}

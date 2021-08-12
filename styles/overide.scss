@@ -1,0 +1,117 @@
+img {
+  user-select: none;
+}
+
+hr {
+  border-color: $body-color;
+  border-top-width: 3px;
+  opacity: 0.15;
+}
+
+.products-row {
+  @include media-breakpoint-down(xl) {
+    margin-left: rem(-7.5px);
+    margin-right: rem(-7.5px);
+    > * {
+      padding-left: rem(7.5px);
+      padding-right: rem(7.5px);
+    }
+    .mb-col {
+      margin-bottom: rem(15px);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-left: rem(-4px);
+    margin-right: rem(-4px);
+    > * {
+      padding-left: rem(4px);
+      padding-right: rem(4px);
+    }
+    .mb-col {
+      margin-bottom: rem(8px);
+    }
+  }
+}
+
+.noUi {
+  &-connect {
+    background: $secondary;
+  }
+  &-target {
+    background: rgba($primary, 0.1);
+    border-color: rgba($primary, 0.1);
+    box-shadow: none;
+  }
+  &-horizontal {
+    height: 5px;
+  }
+}
+
+.noUi-horizontal .noUi-tooltip {
+  bottom: auto;
+  top: 120%;
+}
+.noUi-horizontal .noUi-handle {
+  height: 20px;
+  border: 3px solid $secondary;
+  border-radius: 20rem;
+  background: $secondary;
+  box-shadow: none;
+  width: 20px;
+  top: -9px;
+  &:focus {
+    outline: 0;
+  }
+}
+.noUi-handle:before,
+.noUi-handle:after {
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+.noUi-horizontal .noUi-tooltip {
+  font-size: rem(12px);
+  padding: 0.2rem 0.4rem;
+  line-height: 1;
+  border-color: $gray-400;
+}
+
+.form-control.is-otp {
+  border-radius: 0;
+  border: 0;
+  background: rgba($primary, 0.08);
+  text-align: center;
+  @include rfs(60px, min-height);
+}
+
+// IMAGES
+.ir {
+  display: block;
+  max-width: 100%;
+  margin: 0rem auto;
+}
+.ifluid {
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  transition: all 0.2s ease-in-out;
+  color: $dark;
+  cursor: pointer;
+  &:hover {
+    color: $danger;
+  }
+}
+
+input,
+textarea {
+  height: rem(56px);
+  border-radius: rem(11px) !important;
+}
